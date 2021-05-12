@@ -1,0 +1,93 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+html {
+  font-family: 'Oswald', sans-serif !important;
+  font-size: 10px; }
+
+body {
+  background: #fff !important; }
+
+img {
+  border-radius: 0 !important; }
+
+.header {
+  padding-top: 5px !important;
+  border-bottom: none !important;
+  margin-bottom: 13px !important; }
+  @media (min-width: 1024px) {
+    .header {
+      padding-top: 10px !important; } }
+  .header__top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 97%;
+    max-width: 1140px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 30px; }
+    @media (min-width: 1024px) {
+      .header__top {
+        padding-bottom: 15px; } }
+    .header__top a {
+      font-size: 1.8rem;
+      text-transform: uppercase; }
+  .header__logo {
+    width: 50%;
+    max-width: 286px; }
+  .header__brumandl-text {
+    width: 95%;
+    max-width: 240px;
+    transition: .3s;
+    margin-left: 10px; }
+    @media (min-width: 1024px) {
+      .header__brumandl-text {
+        width: 100%; } }
+    .header__brumandl-text:hover {
+      opacity: 0.6; }
+    .header__brumandl-text img {
+      margin: 0;
+      border-radius: 0; }
+
+.bars {
+  display: none; }
+
+.header-image {
+  position: relative;
+  width: 100%;
+  height: 70vh;
+  overflow: hidden; }
+  .header-image img {
+    min-width: 100%;
+    min-height: 100%; }
+
+.nav-container {
+  max-width: 1140px;
+  margin-left: auto;
+  margin-right: auto; }
+
+.nav__list {
+  width: auto;
+  max-width: fit-content;
+  margin-left: 0;
+  margin-bottom: 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  list-style: none; }
+  .nav__list a {
+    padding: 15px 20px;
+    text-transform: uppercase;
+    font-size: 1.6rem;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 500;
+    color: #000; }
+    .nav__list a:hover {
+      color: #fff;
+      background: #000; }
+    .nav__list a:focus {
+      outline: 0; }
