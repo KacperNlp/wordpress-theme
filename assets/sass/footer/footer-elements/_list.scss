@@ -1,0 +1,53 @@
+.footer-list{
+    font-family: 'Arial', sans-serif;
+
+    &__grid-container{
+        display:grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap: 50px;
+
+        &:nth-of-type(1){
+            margin-bottom: 30px;
+        }
+
+        @media (min-width:760px) {
+            grid-template-columns: repeat(3, 1fr);
+        }
+    }
+
+    
+    &__section-header{
+        margin-bottom:10px;
+        font-size: 1.8rem;
+        font-weight: 600;
+        color:#fff;
+    }
+
+    &__header{
+        margin-bottom:0px;
+        font-size: 1.6rem;
+        color:#fff;
+    }
+
+    &__list-container{
+        & ul{
+            margin-left:0;
+            list-style: none;
+        }
+    }
+
+    &__element{
+        font-size: 1.6rem;
+        & a{
+            color:#8b8b8b;
+
+            &:focus{
+                outline:0;
+            }
+
+            &:hover{
+                color: lighten($color: #8b8b8b, $amount: 20)
+            }
+        }
+    }
+}

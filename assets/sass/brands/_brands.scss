@@ -1,0 +1,55 @@
+.brands{
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 40px;
+    align-items: center;
+    justify-items: center;
+    width:100%;
+
+    @media (min-width:700px) {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media (min-width:1024px) {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+.brand{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+    font-family: 'Share', cursive;
+
+    & img, 
+    &__header, 
+    &__description{
+        margin-bottom: 20px;
+    }
+
+    &__header{
+        text-transform: uppercase;
+        font-weight: 600;
+        font-size: 2.5rem;
+
+        &--ktm{
+            color:#ff6600;
+        }
+
+        &--hqv{
+            color:#002550;
+        }
+
+        &--gas{
+            color:#b7004e;
+        }
+    }
+
+    &__description{
+        margin-bottom: 30px;
+        color:#000;
+        font-size: 1.8rem;
+    }
+}

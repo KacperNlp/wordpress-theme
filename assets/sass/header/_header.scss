@@ -1,12 +1,10 @@
 .header{
     padding-top:5px !important;
     border-bottom: none !important;
-    margin-bottom: 13px !important;
+    margin-bottom: 0px !important;
 
-    @media (min-width:1024px) {
-        &{
-            padding-top:10px !important;
-        }
+    @media (min-width:760px) {
+        padding-top:10px !important;
     }
 
     &__top{
@@ -17,11 +15,7 @@
         max-width: 1140px;
         margin-left:auto;
         margin-right:auto;
-        padding-bottom: 30px;
-
-        @media (min-width:1024px) {
-            padding-bottom: 15px;
-        }
+        padding-bottom: 15px;
 
         & a{
             font-size: 1.8rem;
@@ -35,13 +29,13 @@
     }
 
     &__brumandl-text{
-        width:95%;
+        width:90%;
         max-width: 240px;
         transition: .3s;
-        margin-left:10px;
 
-        @media (min-width:1024px) {
+        @media (min-width:760px) {
             width:100%;
+            margin-left:10px;
         }
 
         &:hover{
@@ -57,8 +51,28 @@
 }
 
 .bars{
-    display: none;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width:65px;
+    margin-right:5px;
+    padding:0;
+    background:transparent;
+    outline:0;
+    transform: translateX(calc(100vw - 70px));
+    font-size: 1.6rem;
+    text-transform: uppercase;
+
+    &:focus{
+        outline:0;
+        background: transparent;
+    }
+
+    @media (min-width:760px) {
+        display: none;
+    }
 }
 
-@import './header-elements/header-imgs';
+@import './header-elements/header-img';
 @import './header-elements/nav';

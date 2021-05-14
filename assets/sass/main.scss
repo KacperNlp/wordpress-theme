@@ -5,7 +5,7 @@
 }
 
 html{
-    font-family: 'Oswald', sans-serif !important;
+    font-family: 'Share', cursive;
     font-size: 10px;
 }
 
@@ -17,4 +17,11 @@ img{
     border-radius: 0 !important;
 }
 
+@import './aboutStore/about-store';
+@import './brands/brands';
+@import './buttons/buttons';
+@import './footer/footer';
 @import './header/header';
+@import './newses/news';
+@import './section/section';
+@import './slider/slider';
