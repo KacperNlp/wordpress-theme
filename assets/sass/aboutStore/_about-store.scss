@@ -4,7 +4,7 @@
     align-items: flex-start;
     justify-content: flex-start;
 
-    @media (min-width:760px) {
+    @include mediaQuery($medium) {
         flex-direction: row;
         align-items: center;
 
@@ -16,7 +16,7 @@
     &__content{
         width:100%;
 
-        @media (min-width:760px) {
+        @include mediaQuery($medium)  {
             width:50%;
 
             &--on-the-right{
@@ -37,7 +37,7 @@
     &__img{
         width:100%;
 
-        @media (min-width:760px) {
+        @include mediaQuery($medium)  {
             width:50%;
             &--on-the-left{
                 width:65%;

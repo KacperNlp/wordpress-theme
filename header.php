@@ -12,6 +12,7 @@
 <head>
 <meta charset="<?php bloginfo( 'charset' ); ?>">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<title><?php wp_title(); ?></title>
 <link rel="preconnect" href="https://fonts.gstatic.com">
 <link href="https://fonts.googleapis.com/css2?family=Oswald&family=Share:wght@400;700&display=swap" rel="stylesheet">
 <link rel="profile" href="http://gmpg.org/xfn/11">

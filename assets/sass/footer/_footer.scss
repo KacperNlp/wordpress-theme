@@ -1,10 +1,10 @@
 .footer{
     padding:20px 0 0;
-    background: #151515;
+    background: $footer-background;
 
     &__container{
         width:90%;
-        max-width:1140px;
+        max-width:$max-section-width;
         margin:0 auto;
     }
 
@@ -18,53 +18,59 @@
     }
 
     &__lists-section{
-        margin:30px 0;
+        margin-top:30px;
     }
 
     
     &__bottom-section{
         padding:20px 0 30px;
-        border-top: 1px solid #8b8b8b;
+        border-top: 1px solid $footer-text-color;
         display: flex;
         flex-direction: column;
 
         @media (min-width:760px) {
             flex-direction: row;
             justify-content: space-between;
+            align-items: flex-start;
         }
 
         &-copy-right{
-            align-self: flex-end;
-            font-size: 1.4rem;
+            display: flex;
+            justify-self: flex-end;
+            font-size: $small-font-size;
         }
+    }
+
+    &-widgets{
+        padding:0;
     }
 };
 
 .contact-ways{
     display:grid;
     grid-gap:20px;
-    font-size: 1.6rem;
-    color:#8b8b8b;
+    font-size: $medium-font-size;
+    color:$footer-text-color;
 
     &__text{
         margin-bottom: 10px;
-        font-family: 'Share', cursive;
+        font-family: $font-family-for-site-content;
 
         &--bold{
-            color:#fff;
-            font-weight: 500;
+            color:$site-background;
+            font-weight: $bold-text;
         }
     }
 
     &__link{
-        color:#8b8b8b;
+        color:$footer-text-color;
 
         &:focus{
             outline: 0;
         }
 
         &:hover{
-            color: lighten($color: #8b8b8b, $amount: 20)
+            color: lighten($color: $footer-text-color, $amount: 20)
         }
     }
 };

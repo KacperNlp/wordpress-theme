@@ -1,4 +1,7 @@
 <?php
+//import theme widgets
+require_once 'inc/widgets/braumandl-brands-widget.php';
+
 //add styles
 function styles_enqueue(){
     wp_register_style('main-style', get_template_directory_uri() . '-child/style.css', array(), null, 'all');
@@ -26,7 +29,7 @@ add_action('wp_enqueue_scripts', 'javascript_enqueue');
 add_theme_support('menus');
 add_theme_support('post-thumbnails');
 
-//remove site title from storefront_header
+//remove theme storefront credits from footer
 function header_main_link(){
     remove_action( 'storefront_header', 'storefront_site_branding', 20 );
 };
@@ -94,3 +97,200 @@ function add_site_title(){
 };
 
 add_action('site-title', 'add_site_title');
+
+//checks if sidebar has any widget
+function is_sidebar_active($siderbarIndex){
+    global $wp_registered_sidebars;
+    $widgetColumns = wp_get_sidebars_widgets();
+    if($widgetColumns[$siderbarIndex])
+        return true;
+    else
+        return false;
+};
+
+//footer copyright widget
+function init_widgets(){
+    register_sidebar(
+        array(
+            'name' => 'Braumandl: Footer copyright',
+            'id' => 'footer-copyright',
+            'before_widget' => ' ',
+            'after_widget'  => ' ',
+            'before_title'  => ' ',
+            'after_title'   => ' ',
+            )
+        );
+
+    register_sidebar(
+        array(
+            'name' => 'Braumandl: KTM Brand Header (Home)',
+            'id' => 'ktm-header',
+            'before_widget' => ' ',
+            'after_widget'  => ' ',
+            'before_title'  => ' ',
+            'after_title'   => ' ',
+            )
+        );
+
+    register_sidebar(
+        array(
+            'name' => 'Braumandl: KTM Brand Description (Home)',
+            'id' => 'ktm-text',
+            'before_widget' => ' ',
+            'after_widget'  => ' ',
+            'before_title'  => ' ',
+            'after_title'   => ' ',
+            )
+        );
+
+
+        register_sidebar(
+            array(
+                'name' => 'Braumandl: Husqvarna Brand Header (Home)',
+                'id' => 'hqv-header',
+                'before_widget' => ' ',
+                'after_widget'  => ' ',
+                'before_title'  => ' ',
+                'after_title'   => ' ',
+                )
+            );
+    
+        register_sidebar(
+            array(
+                'name' => 'Braumandl: Husqvarna Brand Description (Home)',
+                'id' => 'hqv-text',
+                'before_widget' => ' ',
+                'after_widget'  => ' ',
+                'before_title'  => ' ',
+                'after_title'   => ' ',
+                )
+            );
+
+            
+        register_sidebar(
+            array(
+                'name' => 'Braumandl: GASGAS Brand Header (Home)',
+                'id' => 'gas-header',
+                'before_widget' => ' ',
+                'after_widget'  => ' ',
+                'before_title'  => ' ',
+                'after_title'   => ' ',
+                )
+            );
+    
+        register_sidebar(
+            array(
+                'name' => 'Braumandl: GASGAS Brand Description (Home)',
+                'id' => 'gas-text',
+                'before_widget' => ' ',
+                'after_widget'  => ' ',
+                'before_title'  => ' ',
+                'after_title'   => ' ',
+                )
+            );
+
+        register_sidebar(
+            array(
+                'name' => 'Braumandl: Onlineshop Title Section (Home)',
+                'id' => 'onlineshop-home-title',
+                'before_widget' => ' ',
+                'after_widget'  => ' ',
+                'before_title'  => ' ',
+                'after_title'   => ' ',
+                )
+            );
+
+        register_sidebar(
+            array(
+                'name' => 'Braumandl: Onlineshop Content Section (Home)',
+                'id' => 'onlineshop-home-content',
+                'before_widget' => ' ',
+                'after_widget'  => ' ',
+                'before_title'  => ' ',
+                'after_title'   => ' ',
+                )
+            );
+
+        register_sidebar(
+            array(
+                'name' => 'Braumandl: Shop Title Section (Home)',
+                'id' => 'shop-home-title',
+                'before_widget' => ' ',
+                'after_widget'  => ' ',
+                'before_title'  => ' ',
+                'after_title'   => ' ',
+                )
+            );
+    
+        register_sidebar(
+            array(
+                'name' => 'Braumandl: Shop Content Top Section (Home)',
+                'id' => 'shop-home-content-top',
+                'before_widget' => ' ',
+                'after_widget'  => ' ',
+                'before_title'  => ' ',
+                'after_title'   => ' ',
+                )
+            ); 
+            
+        register_sidebar(
+            array(
+                'name' => 'Braumandl: Shop Content Bottom Section (Home)',
+                'id' => 'shop-home-content-bottom',
+                'before_widget' => ' ',
+                'after_widget'  => ' ',
+                'before_title'  => ' ',
+                'after_title'   => ' ',
+                )
+            ); 
+
+        register_sidebar(
+            array(
+                'name' => 'Braumandl: Footer',
+                'id' => 'braumandl-footer',
+                'before_widget' => ' ',
+                'after_widget'  => ' ',
+                'before_title'  => ' ',
+                'after_title'   => ' ',
+                )
+            ); 
+
+       register_sidebar(
+            array(
+                'name' => 'Braumandl: Slider Title/Header (Home)',
+                'id' => 'slider-home-header',
+                'before_widget' => ' ',
+                'after_widget'  => ' ',
+                'before_title'  => ' ',
+                'after_title'   => ' ',
+                )
+            ); 
+            
+        register_sidebar(
+            array(
+                'name' => 'Braumandl: Slider Content Top Section (Home)',
+                'id' => 'shop-home-content-top',
+                'before_widget' => ' ',
+                'after_widget'  => ' ',
+                'before_title'  => ' ',
+                'after_title'   => ' ',
+                )
+            ); 
+
+        register_sidebar(
+            array(
+                'name' => 'Braumandl: Slider Content Bottom Section (Home)',
+                'id' => 'shop-home-content-bottom',
+                'before_widget' => ' ',
+                'after_widget'  => ' ',
+                'before_title'  => ' ',
+                'after_title'   => ' ',
+                )
+            ); 
+
+
+    register_widget('braumandl_text_widget');
+};
+
+add_action('widgets_init', 'init_widgets');
+

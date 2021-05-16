@@ -1,27 +1,35 @@
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-html{
-    font-family: 'Share', cursive;
+@import './variables';
+
+html {
+    font-family: $font-family-for-site-content;
     font-size: 10px;
 }
 
-body{
-    background: #fff !important;
+body {
+    background: $site-background !important;
 }
 
-img{
+img {
     border-radius: 0 !important;
 }
 
 @import './aboutStore/about-store';
+
 @import './brands/brands';
 @import './buttons/buttons';
+
 @import './footer/footer';
+
 @import './header/header';
+
 @import './newses/news';
+
 @import './section/section';
+
 @import './slider/slider';

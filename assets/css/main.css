@@ -4,7 +4,7 @@
   box-sizing: border-box; }
 
 html {
-  font-family: 'Share', cursive;
+  font-family: "Share", cursive;
   font-size: 10px; }
 
 body {
@@ -53,7 +53,7 @@ img {
   align-items: center;
   justify-items: center;
   width: 100%; }
-  @media (min-width: 700px) {
+  @media (min-width: 760px) {
     .brands {
       grid-template-columns: repeat(2, 1fr); } }
   @media (min-width: 1024px) {
@@ -66,9 +66,10 @@ img {
   align-items: center;
   justify-content: space-between;
   text-align: center;
-  font-family: 'Share', cursive; }
+  font-family: "Share", cursive; }
   .brand img, .brand__header, .brand__description {
-    margin-bottom: 20px; }
+    margin-bottom: 20px;
+    margin-top: 0px; }
   .brand__header {
     text-transform: uppercase;
     font-weight: 600;
@@ -89,7 +90,7 @@ img {
   background: transparent !important;
   border: 1px solid #000 !important;
   text-transform: uppercase;
-  font-family: 'Share', cursive !important;
+  font-family: "Share", cursive !important;
   font-weight: 500;
   font-size: 1.6rem;
   outline: 0; }
@@ -110,7 +111,7 @@ img {
       .footer__top-section {
         grid-template-columns: 3fr 2fr 1fr; } }
   .footer__lists-section {
-    margin: 30px 0; }
+    margin-top: 30px; }
   .footer__bottom-section {
     padding: 20px 0 30px;
     border-top: 1px solid #8b8b8b;
@@ -119,10 +120,14 @@ img {
     @media (min-width: 760px) {
       .footer__bottom-section {
         flex-direction: row;
-        justify-content: space-between; } }
+        justify-content: space-between;
+        align-items: flex-start; } }
     .footer__bottom-section-copy-right {
-      align-self: flex-end;
+      display: flex;
+      justify-self: flex-end;
       font-size: 1.4rem; }
+  .footer-widgets {
+    padding: 0; }
 
 .contact-ways {
   display: grid;
@@ -131,7 +136,7 @@ img {
   color: #8b8b8b; }
   .contact-ways__text {
     margin-bottom: 10px;
-    font-family: 'Share', cursive; }
+    font-family: "Share", cursive; }
     .contact-ways__text--bold {
       color: #fff;
       font-weight: 500; }
@@ -151,7 +156,7 @@ img {
     outline: none; }
 
 .footer-list {
-  font-family: 'Arial', sans-serif; }
+  font-family: "Arial", sans-serif; }
   .footer-list__grid-container {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
@@ -253,8 +258,8 @@ img {
   font-size: 1.6rem;
   text-transform: uppercase; }
   .bars:focus {
-    outline: 0;
-    background: transparent; }
+    background: transparent;
+    outline: 0; }
   @media (min-width: 760px) {
     .bars {
       display: none; } }
@@ -309,7 +314,7 @@ img {
       padding: 5px;
       text-transform: uppercase;
       font-size: 1.6rem;
-      font-family: 'Oswald', sans-serif;
+      font-family: "Oswald", sans-serif;
       font-weight: 500;
       color: #000; }
       @media (min-width: 760px) {
@@ -341,8 +346,9 @@ img {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  justify-content: center;
+  justify-content: flex-start;
   width: 100%;
+  min-height: 400px;
   padding: 20px;
   box-shadow: 1px 3px 6px 0px rgba(0, 0, 0, 0.07);
   transition: .3s; }
@@ -351,12 +357,13 @@ img {
     background: #000; }
   @media (min-width: 1024px) {
     .news {
-      padding: 30px; } }
+      padding: 30px;
+      min-height: 600px; } }
   .news img {
     width: 100%; }
   .news__title {
     margin: 20px 0;
-    font-family: 'Share', cursive;
+    font-family: "Share", cursive;
     font-size: 2.5rem;
     color: #000; }
     .news:hover .news__title {
@@ -364,7 +371,7 @@ img {
   .news__sneak-peek,
   .news p {
     margin-bottom: 10px;
-    font-family: 'Share', cursive;
+    font-family: "Share", cursive;
     font-size: 1.6rem;
     color: #000; }
   .news:hover p,
@@ -372,7 +379,7 @@ img {
     color: #fff !important; }
   .news__link {
     align-self: flex-end;
-    font-family: 'Share', cursive;
+    font-family: "Share", cursive;
     font-size: 1.4rem;
     color: #ff6600; }
     .news__link:hover {
@@ -384,7 +391,7 @@ img {
   max-width: 1140px; }
   .section__header {
     margin-bottom: 80px;
-    font-family: 'Share', cursive;
+    font-family: "Share", cursive;
     font-size: 6rem;
     font-weight: 500; }
     .section__header--gray-sectio {
@@ -433,11 +440,11 @@ img {
     margin-bottom: 20px;
     color: #000;
     font-weight: 600;
-    font-family: 'Share', cursive;
+    font-family: "Share", cursive;
     font-size: 2.5rem; }
   .content__text {
     color: #000;
-    font-family: 'Share', cursive;
+    font-family: "Share", cursive;
     font-size: 1.8rem; }
   .content__img {
     margin: 40px 0; }
@@ -473,19 +480,19 @@ img {
 .swiper-slide {
   position: relative;
   left: -25px;
-  overflow: hidden;
   width: 220px !important;
-  height: 240px !important; }
+  height: 240px !important;
+  overflow: hidden; }
   @media (min-width: 760px) {
     .swiper-slide {
+      left: 0;
       width: 480px !important;
-      height: 480px !important;
-      left: 0; } }
+      height: 480px !important; } }
   @media (min-width: 1024px) {
     .swiper-slide {
+      left: 0;
       width: 550px !important;
-      height: 640px !important;
-      left: 0; } }
+      height: 640px !important; } }
   .swiper-slide img {
     width: 100%;
     height: 100%; }
@@ -509,10 +516,10 @@ img {
     display: none; }
   .swiper-button-prev span {
     position: relative;
+    transform: rotate(-45deg);
     font-size: 1.6rem;
     font-weight: 300;
     color: #000;
-    transform: rotate(-45deg);
     z-index: 3; }
     @media (min-width: 760px) {
       .swiper-button-prev span {

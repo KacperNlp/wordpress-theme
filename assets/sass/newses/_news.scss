@@ -5,11 +5,11 @@
     justify-items: center;
     grid-gap: 20px;
 
-    @media (min-width:760px) {
+    @include mediaQuery($medium)  {
         grid-template-columns: repeat(3, 1fr);
     }
 
-    @media (min-width:1024px) {
+    @include mediaQuery($large)  {
         grid-template-columns: repeat(3, 1fr);
         grid-gap: 30px;
     }
@@ -19,19 +19,21 @@
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    justify-content: center;
+    justify-content: flex-start;
     width:100%;
+    min-height: 400px;
     padding:20px;
     box-shadow: 1px 3px 6px 0px rgba(0, 0, 0, 0.07);
     transition: .3s;
 
     &:hover{
-        color:#fff;
-        background: #000;
+        color: $site-background;
+        background: $font-color;
     }
 
-    @media (min-width:1024px) {
+    @include mediaQuery($large)  {
         padding:30px;
+        min-height: 600px;
     }
 
     & img{
@@ -40,36 +42,36 @@
 
     &__title{
         margin:20px 0;
-        font-family: 'Share', cursive;
-        font-size: 2.5rem;
-        color:#000;
+        font-family: $font-family-for-site-content;
+        font-size: $content-header;
+        color: $font-color;
 
         .news:hover &{
-            color:#fff;
+            color: $site-background;
         }
     }
 
     &__sneak-peek, 
     & p{
         margin-bottom: 10px;
-        font-family: 'Share', cursive;
-        font-size: 1.6rem;
-        color:#000;
+        font-family: $font-family-for-site-content;
+        font-size: $medium-font-size;
+        color: $font-color;
     }
 
     &:hover p,
     &:hover &__sneak-peek{
-        color:#fff !important;
+        color: $site-background !important;
     }
 
     &__link{
         align-self: flex-end;
-        font-family: 'Share', cursive;
-        font-size: 1.4rem;
-        color:#ff6600;
+        font-family: $font-family-for-site-content;
+        font-size: $small-font-size;
+        color: $ktm-header-color;
 
         &:hover{
-            color:#fff;
+            color: $site-background;
         }
     }
 }

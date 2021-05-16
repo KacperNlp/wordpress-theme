@@ -1,5 +1,5 @@
 .footer-list{
-    font-family: 'Arial', sans-serif;
+    font-family: $footer-font-family;
 
     &__grid-container{
         display:grid;
@@ -10,7 +10,7 @@
             margin-bottom: 30px;
         }
 
-        @media (min-width:760px) {
+        @include mediaQuery($medium)  {
             grid-template-columns: repeat(3, 1fr);
         }
     }
@@ -18,15 +18,15 @@
     
     &__section-header{
         margin-bottom:10px;
-        font-size: 1.8rem;
+        font-size: $content-font-size;
         font-weight: 600;
-        color:#fff;
+        color: $site-background;
     }
 
     &__header{
         margin-bottom:0px;
-        font-size: 1.6rem;
-        color:#fff;
+        font-size: $medium-font-size;
+        color: $site-background;
     }
 
     &__list-container{
@@ -37,16 +37,16 @@
     }
 
     &__element{
-        font-size: 1.6rem;
+        font-size: $medium-font-size;
         & a{
-            color:#8b8b8b;
+            color: $footer-text-color;
 
             &:focus{
                 outline:0;
             }
 
             &:hover{
-                color: lighten($color: #8b8b8b, $amount: 20)
+                color: lighten($color: $footer-text-color, $amount: 20)
             }
         }
     }

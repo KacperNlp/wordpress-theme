@@ -5,11 +5,11 @@
     background-size: cover;
     background-position: 50% 50%;
 
-    @media (min-width:760px) {
+    @include mediaQuery($medium) {
         height: 100vh;
     }
 
-    @media (min-width:1024px) {
+    @include mediaQuery($large)  {
         height: 75vh;
     }
 }

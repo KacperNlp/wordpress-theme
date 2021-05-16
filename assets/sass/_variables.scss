@@ -1,0 +1,52 @@
+///Variables for font props
+$bold-text:500;
+$content-font-size: 1.8rem;
+$content-header: 2.5rem;
+$section-header: 6rem;
+$small-font-size: 1.4rem;
+$medium-font-size: 1.6rem;
+$font-color: #000;
+$font-family-for-site-content: 'Share', cursive;;
+$font-family-for-navigation: 'Oswald', sans-serif;
+
+//footer props
+$footer-text-color:#8b8b8b;
+$footer-font-family: 'Arial', sans-serif;
+
+//colors
+$footer-background:#151515;
+$site-background: #fff;
+//brands
+$ktm-header-color:#ff6600;
+$hqv-header-color:#002550;
+$gas-header-color:#b7004e;
+
+$max-section-width:1140px;
+
+
+//media queries
+$medium: 'medium';
+$large: 'large';
+
+$breakpoints: (
+    'medium':  (min-width:760px),
+    'large':  (min-width:1024px),
+);
+
+@mixin mediaQuery($breakpoint){
+    $raw-query: map-get($breakpoints, $breakpoint);
+
+    @if $raw-query{
+        $query: if(
+            type-of($raw-query) == 'string',
+            unquote($raw-query),
+            inspect($raw-query)
+        );
+
+        @media #{$query} {
+            @content;
+        }
+    }@else{
+        @error 'No value found fo `#{breakpoint}`'
+    }
+};

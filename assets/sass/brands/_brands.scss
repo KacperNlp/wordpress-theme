@@ -6,11 +6,11 @@
     justify-items: center;
     width:100%;
 
-    @media (min-width:700px) {
+    @include mediaQuery($medium)  {
         grid-template-columns: repeat(2, 1fr);
     }
 
-    @media (min-width:1024px) {
+    @include mediaQuery($large)  {
         grid-template-columns: repeat(3, 1fr);
     }
 }
@@ -21,35 +21,36 @@
     align-items: center;
     justify-content: space-between;
     text-align: center;
-    font-family: 'Share', cursive;
+    font-family: $font-family-for-site-content;
 
     & img, 
     &__header, 
     &__description{
-        margin-bottom: 20px;
+       margin-bottom: 20px;
+        margin-top:0px;
     }
 
     &__header{
         text-transform: uppercase;
         font-weight: 600;
-        font-size: 2.5rem;
+        font-size: $content-header;
 
         &--ktm{
-            color:#ff6600;
+            color: $ktm-header-color;
         }
 
         &--hqv{
-            color:#002550;
+            color: $hqv-header-color;
         }
 
         &--gas{
-            color:#b7004e;
+            color: $gas-header-color;
         }
     }
 
     &__description{
         margin-bottom: 30px;
-        color:#000;
-        font-size: 1.8rem;
+        color: $font-color;
+        font-size: $content-font-size;
     }
 }

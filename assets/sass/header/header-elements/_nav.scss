@@ -1,7 +1,7 @@
 .nav-container{
-    max-width:1140px;
-    margin-left:auto;
-    margin-right:auto;
+    max-width: $max-section-width;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .nav{
@@ -11,7 +11,7 @@
         display: block;
     }
 
-    @media (min-width:760px) {
+    @include mediaQuery($medium)  {
         display: block;
     }
 
@@ -25,7 +25,7 @@
         justify-content: space-between;
         list-style: none;
 
-        @media (min-width:760px) {
+        @include mediaQuery($medium)  {
             max-width: fit-content;
             flex-direction: row;
             align-items: center;
@@ -34,7 +34,7 @@
         & li{
             width:100%;
             
-            @media (min-width:760px) {
+            @include mediaQuery($medium)  {
                 width:auto;
             }
         }
@@ -44,20 +44,20 @@
             display:block;
             padding:5px;
             text-transform: uppercase;
-            font-size: 1.6rem;
-            font-family: 'Oswald', sans-serif;
-            font-weight: 500;
-            color:#000;
+            font-size: $medium-font-size;
+            font-family: $font-family-for-navigation;
+            font-weight: $bold-text;
+            color: $font-color;
 
-            @media (min-width:760px) {
+            @include mediaQuery($medium)  {
                 display: inline-block;
                 width:auto;
                 padding:15px 20px;
             }
 
             &:hover{
-                color:#fff;
-                background: #000;
+                color: $site-background;
+                background: $font-color;
             }
 
             &:focus{

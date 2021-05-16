@@ -8,8 +8,8 @@
 
         & li{
             padding:0 10px;
-            border-right:1px solid #8b8b8b;
-            font-size: 1.4rem;
+            border-right:1px solid $footer-text-color;
+            font-size: $small-font-size;
 
             &:nth-of-type(1){
                 padding-left:0;
@@ -21,14 +21,14 @@
         }
 
         & a{
-            color:#8b8b8b;
+            color: $footer-text-color;
 
             &:focus{
                 outline:0;
             }
 
             &:hover{
-                color: lighten($color: #8b8b8b, $amount: 20)
+                color: lighten($color: $footer-text-color, $amount: 20)
             }
         }
     }
